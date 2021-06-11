@@ -7,7 +7,8 @@ import com.epicbot.api.shared.script.ScriptManifest;
 @ScriptManifest(name = "GUI", gameType = GameType.OS)
 public class main extends LoopScript {
 
-    woodcuttingSetting settings = new woodcuttingSetting();
+    gui settings = new gui();
+
 
     @Override
     public boolean onStart(String... strings) {
@@ -17,6 +18,9 @@ public class main extends LoopScript {
 
     @Override
     protected int loop() {
+        if (settings.treeType == null) {
+            return -1;
+        }
         return 0;
     }
 }
