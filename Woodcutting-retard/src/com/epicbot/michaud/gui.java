@@ -1,8 +1,6 @@
 package com.epicbot.michaud;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.EventListener;
 
 public class gui implements EventListener {
@@ -28,13 +26,7 @@ public class gui implements EventListener {
         comboBox.setBounds(60, 20, 150, 30);
         startButton.setBounds(220, 20, 60, 30);
         startButton.setFocusable(false);
-
-        startButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                treeType = (String[]) comboBox.getSelectedItem();
-                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            }
-        } );
+        startButton.addActionListener(e -> frame.dispose());
 
     }
 }
