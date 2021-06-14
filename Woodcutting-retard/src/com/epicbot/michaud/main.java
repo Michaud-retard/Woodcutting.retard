@@ -22,9 +22,9 @@ public class main extends LoopScript {
     protected int loop() {
         if (settings == null){
             return -1;
-        } else if (settings.value.equals("Value 1")) {
+        } else if (settings.value.equals("Value 1")) {  // Can not get the varible value.
             getAPIContext().walking().walkTo(AREA_NORMAL_TREE.getCentralTile());
-        } else if (settings.value.equals("Value 2")) {
+        } else if (settings.value.equals("Value 2")) {  // Can not get the varible value.
             getAPIContext().walking().walkTo(TEST_2.getCentralTile());
         }
 
