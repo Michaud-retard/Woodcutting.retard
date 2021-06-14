@@ -9,8 +9,6 @@ public class gui implements EventListener {
     JLabel treeLabel = new JLabel("Tree:");
     JComboBox<comboItem> comboBox = new JComboBox<>();
     JButton startButton = new JButton("Start");
-    Object item = comboBox.getSelectedItem();
-    String value = ((gui.comboItem)item).getValue();
 
     gui() {
 
@@ -32,6 +30,8 @@ public class gui implements EventListener {
         //startButton.addActionListener(e -> frame.dispose());
 
         startButton.addActionListener(e -> {
+            Object item = comboBox.getSelectedItem();
+            String value = ((comboItem)item).getValue();
             frame.dispose();
         });
 
